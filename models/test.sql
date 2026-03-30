@@ -1,0 +1,1 @@
+select * from {{ ref('snowflake_contract_rates') }}

@@ -18,6 +18,7 @@ models:
     config:
       contract:
         enforced: true
+    latest_version: 1
 
     columns:
       - name: order_month
@@ -25,10 +26,19 @@ models:
         description: ""
         tests:
           - unique
-
       - name: gross_revenue
         data_type: number
         description: ""
+      - name: new
+        data_type: number
+    versions:
+      - v: 1
+        columns:
+          - include: all
+            exclude: [new]
+      - v: 2
+        columns:
+          - include: all
 
 
 exposures:

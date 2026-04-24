@@ -54,6 +54,7 @@ models:
     marts:
       core:
         +materialized: table
+        +access: public
       
 
 

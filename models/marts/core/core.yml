@@ -2,6 +2,8 @@ version: 2
 models:
   - name: dim_customers
     description: Customer dimensions table
+    config: 
+      access: public
     columns:
       - name: customer_key
         description: Primary key on the customers table
@@ -77,6 +79,8 @@ models:
         description: '{{ doc("account_balance") }}'
   - name: fct_order_items
     description: order items fact table
+    config: 
+      access: public
     columns:
       - name: order_item_key
         description: '{{ doc("order_item_key") }}'
@@ -137,6 +141,8 @@ models:
         description: '{{ doc("net_item_sales_amount") }}'
   - name: fct_orders
     description: orders fact table
+    config: 
+      access: public
     columns:
       - name: order_key
         description: primary key of the model
@@ -176,6 +182,8 @@ models:
         description: '{{ doc("net_item_sales_amount") }}'
   - name: fct_orders_by_nation
     description: Orders by nation model
+    config: 
+      access: public
     columns:
       - name: ORDER_KEY
         description: "Primary key of "
